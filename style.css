@@ -93,10 +93,129 @@ nav {
     padding: 50px 0 0 0;
 }
 
+.cta-select,
+.cta-add {
+    
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.cta-select {
+    border: 2px solid #c36cbb;
+    background: transparent;
+    color: #c36cbb;
+    margin-right: 30px;
+}
+
+.cta-add {
+    background: #c36cbb;
+    border: none;
+    color: #fff;
+}
+
 .cover {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
 }
 
 .cover img {
+    height: 100%;
+    /* height: 26vw; */
+    filter: drop-shadow(0 8px 10px #54546F);
+    animation: drop 1.5s ease;
+}
+
+.big-circle {
+    height: 90vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+.medium-circle {
+    position: absolute;
+    top: 30%;
+    right: 30%;
+    z-index: -1;
     height: 60vh;
+    opacity: .2;
+}
+
+.small-circle {
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+    z-index: -1;
+    height: 40vh;
+    opacity: 0.5;
+}
+
+.laptop-select {
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    right: 28vw;
+}
+
+@keyframes drop {
+
+    0% {
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .presentation {
+        flex-direction: column;
+    }
+
+    .cover img {
+        height: 60vw;
+    }
+
+    .introduction {
+        margin-top: 5vh;
+        text-align: center;
+    }
+
+    .intro-text h1 {
+        font-size: 30px;
+    }
+
+    .intro-text p {
+        font-size: 18px;
+    }
+
+    .cta {
+        padding: 10px 0 0 0;
+    }
+
+    .laptop-select {
+        bottom: -25vh;
+        right: 50%;
+        width: 50%;
+        transform: translate(50%, 5%);
+    }
+
+    .small-circle,
+    .medium-circle,
+    .big-circle {
+        height: 50vw;
+    }
+
 }
